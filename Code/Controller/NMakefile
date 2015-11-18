@@ -1,0 +1,32 @@
+# MPLAB IDE generated this makefile for use with Microsoft `nmake'.
+# Project: Controller.mcp
+# Date: Mon Apr 07 14:39:27 2014
+
+AS = pic30-as.exe
+CC = pic30-gcc.exe
+LD = pic30-ld.exe
+AR = pic30-ar.exe
+HX = pic30-bin2hex.exe
+RM = del
+
+"Controller.hex" : "Controller.cof"
+	$(HX) "Controller.cof"
+
+"Controller.cof" : "delay.o" "main.o" "uart1.o" "uart2.o"
+	$(CC) -mcpu=33FJ128MC802 "delay.o" "main.o" "uart1.o" "uart2.o" -o"Controller.cof" -Wl,--script="C:\Program Files (x86)\Microchip\MPLAB C30\support\dsPIC33F\gld\p33FJ128MC802.gld",--defsym=__MPLAB_BUILD=1,-Map="Controller.map",--report-mem
+
+"delay.o" : "c:\program files (x86)\microchip\mplab c30\support\dsPIC33F\inc\p33FJ128MC802.inc" "delay.s"
+	$(CC) -mcpu=33FJ128MC802 -c "delay.s" -o"delay.o" -Wa,-g
+
+"main.o" : "uart2.h" "uart1.h" "c:\program files (x86)\microchip\mplab c30\include\ctype.h" "c:\program files (x86)\microchip\mplab c30\include\string.h" "c:\program files (x86)\microchip\mplab c30\include\stdlib.h" "c:\program files (x86)\microchip\mplab c30\include\stdarg.h" "c:\program files (x86)\microchip\mplab c30\include\stddef.h" "c:\program files (x86)\microchip\mplab c30\include\stdio.h" "c:\program files (x86)\microchip\mplab c30\support\dsPIC33F\h\p33FJ128MC802.h" "main.c"
+	$(CC) -mcpu=33FJ128MC802 -x c -c "main.c" -o"main.o" -g -Wall
+
+"uart1.o" : "uart1.h" "c:\program files (x86)\microchip\mplab c30\include\string.h" "c:\program files (x86)\microchip\mplab c30\include\stdarg.h" "c:\program files (x86)\microchip\mplab c30\include\stddef.h" "c:\program files (x86)\microchip\mplab c30\include\stdio.h" "c:\program files (x86)\microchip\mplab c30\support\dsPIC33F\h\p33FJ128MC802.h" "uart1.c"
+	$(CC) -mcpu=33FJ128MC802 -x c -c "uart1.c" -o"uart1.o" -g -Wall
+
+"uart2.o" : "uart2.h" "c:\program files (x86)\microchip\mplab c30\include\string.h" "c:\program files (x86)\microchip\mplab c30\include\stdarg.h" "c:\program files (x86)\microchip\mplab c30\include\stddef.h" "c:\program files (x86)\microchip\mplab c30\include\stdio.h" "c:\program files (x86)\microchip\mplab c30\support\dsPIC33F\h\p33FJ128MC802.h" "uart2.c"
+	$(CC) -mcpu=33FJ128MC802 -x c -c "uart2.c" -o"uart2.o" -g -Wall
+
+"clean" : 
+	$(RM) "delay.o" "main.o" "uart1.o" "uart2.o" "Controller.cof" "Controller.hex"
+

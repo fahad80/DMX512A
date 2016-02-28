@@ -18,4 +18,4 @@ A project for EE5314 Embedded Microcontrollers course from UT Arlington taught b
 
 ### Who do I talk to? ###
 
-* For questions and concern: fahadmirza80@yahoo.com
+* For questions and concerns: fahadmirza80@yahoo.com

@@ -15,7 +15,3 @@ A project for EE5314 Embedded Microcontrollers course from UT Arlington taught b
 ### License ###
 
 * You can use this code. I will be glad if you give me the proper credit. If you don't want to, use it anyway.
-
-### Who do I talk to? ###
-
-* For questions and concerns: fahadmirza80@yahoo.com
